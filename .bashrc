@@ -191,11 +191,11 @@ function set_bash_prompt () {
   else
     BRANCH=''
   fi
-
+  NOW=`date +"%H:%M -"`
   # Set the bash prompt variable.
   PS1="
 ${BLUE}\u@\h ${WHITE}\w${COLOR_NONE} ${BRANCH}
-${PROMPT_SYMBOL} "
+${NOW} ${PROMPT_SYMBOL} "
 }
 
 # Tell bash to execute this function just before displaying its prompt.
