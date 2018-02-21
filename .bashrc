@@ -207,7 +207,7 @@ alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
 # alias less='less -FSRXc'                    # Preferred 'less' implementation
-alias open='xdg-open'
+alias open='xdg-open 2>/dev/null'
 cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias .1='cd ../'                           # Go back 1 directory level
