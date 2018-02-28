@@ -89,6 +89,7 @@ fi
 
 # some more ls aliases
 alias ll='ls -alF'
+alias ls='ls -1'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -201,14 +202,13 @@ ${NOW} ${PROMPT_SYMBOL} "
 # Tell bash to execute this function just before displaying its prompt.
 PROMPT_COMMAND=set_bash_prompt
 
-alias ls='ls -lh'			    # Preferred ‘ls’ implementation
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
 # alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias open='xdg-open 2>/dev/null'
-cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
+cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias .1='cd ../'                           # Go back 1 directory level
 alias .2='cd ../../'                       # Go back 2 directory levels
