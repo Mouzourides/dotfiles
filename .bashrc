@@ -192,7 +192,7 @@ function set_bash_prompt () {
   else
     BRANCH=''
   fi
-  NOW=`date +"%I:%M -"`
+  NOW=`date +"%T -"`
   # Set the bash prompt variable.
   PS1="
 ${BLUE}\u@\h ${WHITE}\w${COLOR_NONE} ${BRANCH}
