@@ -148,13 +148,11 @@ function set_git_branch {
   fi
 
   # Set arrow icon based on status against remote.
-    remote_pattern="# Your branch is (ahead|behind)+ "
-    if [[ ${git_status} == ${remote_pattern} ]]; then
-      if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
+    if [[ ${git_status} =~ "Your branch is ahead" ]]; then
         remote="↑"
-      else
+    elif [[ ${git_status} =~ "Your branch is behind" ]]; then
         remote="↓"
-      fi
+	state="${YELLOW}"
     else
       remote=""
     fi
