@@ -198,7 +198,7 @@ ${NOW} ${PROMPT_SYMBOL} "
 
 # Tell bash to execute this function just before displaying its prompt.
 PROMPT_COMMAND=set_bash_prompt
-
+alias grv=' ~/Downloads/./grv -repoFilePath'
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
