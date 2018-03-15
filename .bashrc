@@ -198,7 +198,7 @@ ${NOW} ${PROMPT_SYMBOL} "
 
 # Tell bash to execute this function just before displaying its prompt.
 PROMPT_COMMAND=set_bash_prompt
-alias grv=' ~/Downloads/./grv -repoFilePath'
+alias grv=' ~/Software/./grv -repoFilePath'
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
@@ -221,7 +221,7 @@ alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable 
 alias show_options='shopt'                  # Show_options: display bash options settings
 alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
 alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
-alias android-studio='bash /etc/android-studio/bin/studio.sh'
+alias studio='bash /usr/bin/android-studio/bin/studio.sh'
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 
  extract () {
